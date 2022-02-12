@@ -3,7 +3,7 @@ const htmlRoutes = require('./routes/htmlroutes');
 const apiRoutes = require('./routes/apiroutes');
 
 const app = express();
-const PORT = process.env.port || 3001;
+const port = process.env.PORT || 3001;
 const path = require('path');
 
 // Add a static middleware for serving assets in the public folder
@@ -18,7 +18,7 @@ app.use('/', htmlRoutes); // importing routes from htmlroutes.js
 app.use('/api', apiRoutes);
 
 
-app.listen(PORT, () =>
+app.listen(port, () =>
   console.log(`Serving static asset routes at http://localhost:${PORT}`)
 );
 
